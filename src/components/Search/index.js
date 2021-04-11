@@ -1,16 +1,19 @@
 import React from 'react';
-
+import { SearchStyled, FormStyled } from './styles';
 const Search = ({ onAddStock }) => {
     const [search, setSearch] = React.useState('')
-    
-    const searchForStock = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log("Prevented");
+      };
+
+    const searchForStock = (e) => {
         if (search.length <= 0) {
             return;
         }
         fetchStock(search);
         console.log("Searching for tickerSymbol: " + search);
-
-        //Todo: reset input
     };
     
 
@@ -19,15 +22,16 @@ const Search = ({ onAddStock }) => {
         .then((res) => res.json())
         .then((json) => {
             onAddStock(json);
+            document.getElementById("search-form").reset();
         });
     }
     return (
-        <div>
-        
-            <input type="text" onChange={e => setSearch(e.target.value)}/>
-            <button onClick={() => searchForStock()}>Add stock</button>
-        
-        </div>
+        <SearchStyled>
+            <FormStyled id = "search-form" onSubmit={handleSubmit}>
+                <input type="text" onChange={e => setSearch(e.target.value)}/>
+                <button onClick={(e) => searchForStock(e.target)}>Add stock</button>
+            </FormStyled>
+        </SearchStyled>
     )
 };
 

@@ -1,8 +1,8 @@
 import './App.css';
 import React from 'react';
-// import Stock from './components/Stock';
 import Stocks from './components/Stocks';
 import Search from './components/Search';
+import Header from './components/Header';
 
 function App() {
   const [stocks, setStocks] = React.useState([]);
@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+        <Header></Header>
         <Search onAddStock={addStock}/>
         <Stocks stocks = {stocks}/>
     </div>
