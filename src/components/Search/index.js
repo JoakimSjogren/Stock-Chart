@@ -5,7 +5,6 @@ const Search = ({ onAddStock }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("Prevented");
       };
 
     const searchForStock = (e) => {
@@ -13,7 +12,6 @@ const Search = ({ onAddStock }) => {
             return;
         }
         fetchStock(search);
-        console.log("Searching for tickerSymbol: " + search);
     };
     
 
@@ -28,7 +26,7 @@ const Search = ({ onAddStock }) => {
     return (
         <SearchStyled>
             <FormStyled id = "search-form" onSubmit={handleSubmit}>
-                <input type="text" onChange={e => setSearch(e.target.value)}/>
+                <input placeholder="TICKER" type="text" onChange={e => setSearch(e.target.value)}/>
                 <button onClick={(e) => searchForStock(e.target)}>Add stock</button>
             </FormStyled>
         </SearchStyled>
