@@ -6,6 +6,7 @@ import Header from './components/Header';
 
 function App() {
   const [stocks, setStocks] = React.useState([]);
+  const [stockInGraph, setStockInGraph] = React.useState([]);
 
   const addStock = (stock) => {
       const id = stocks.length+1;
@@ -13,11 +14,15 @@ function App() {
       setStocks([...stocks, newStock]);
   };
 
+  const showStockInGraph = (stockInfo) => {
+    setStockInGraph(stockInfo);
+  }
+
   return (
     <div className="App">
-        <Header></Header>
+        <Header graphStock={stockInGraph}></Header>
         <Search onAddStock={addStock}/>
-        <Stocks stocks = {stocks}/>
+        <Stocks onShowStockInGraph={showStockInGraph} stocks={stocks}/>
     </div>
   );
 }

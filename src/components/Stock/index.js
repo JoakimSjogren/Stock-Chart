@@ -1,7 +1,7 @@
 // import react from 'react';
 import { StockStyled } from './styles';
 
-const Stock = ({ stock }) => {
+const Stock = ({ stock, onShowStockInGraph }) => {
     let ticker = stock['Meta Data']['2. Symbol'].toUpperCase();
     
     const daysValues = stock['Time Series (Daily)'];
@@ -22,7 +22,7 @@ const Stock = ({ stock }) => {
     var incText = (lastClose>nextToLastClose? "+" : "-");
     
     return (
-        <StockStyled>
+        <StockStyled onClick={e => {onShowStockInGraph(daysValues)}}>
             <div>
                 <h3>{ticker}</h3>
             </div>

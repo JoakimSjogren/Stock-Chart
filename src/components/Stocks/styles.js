@@ -8,6 +8,7 @@ export const HeaderStyled = styled.div`
     width: 100vw;
     display: flex;
     align-items: center;
+    font-size: 2.5em;
     & div {
   height: 100%;
   display: flex;

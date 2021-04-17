@@ -1,9 +1,10 @@
 import { HeaderStyled } from './styles';
 import Graph from '../Graph';
-const Header = () => {
+const Header = (stockInGraph) => {
+    
     return (
         <HeaderStyled>
-            <Graph></Graph>
+            <Graph stock={stockInGraph}></Graph>
         </HeaderStyled>
     )
 }

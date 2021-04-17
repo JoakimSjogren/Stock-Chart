@@ -21,6 +21,6 @@ export const StockStyled = styled.div`
   width: 20%;
 }
 & h5, h3 {
-  
+    font-size: 4em;
 }
   `;

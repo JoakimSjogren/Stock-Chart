@@ -1,9 +1,8 @@
 import React from 'react';
-import Header from '../Header';
 import Stock from '../Stock';
 import { HeaderStyled } from './styles';
 
-const Stocks = ({ stocks }) => {
+const Stocks = ({ stocks, onShowStockInGraph }) => {
     return (
         <div>
             <HeaderStyled>
@@ -24,7 +23,7 @@ const Stocks = ({ stocks }) => {
                 </div>
             </HeaderStyled>
             {stocks.map((stock) => (
-                <Stock key = {stock.id} stock={stock}/>
+                <Stock onShowStockInGraph={onShowStockInGraph} key = {stock.id} stock={stock}/>
             ))}
         </div>
     )
