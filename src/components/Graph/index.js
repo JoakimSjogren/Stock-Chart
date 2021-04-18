@@ -16,11 +16,11 @@ const Graph = (stock) => {
     
    
     // Finds lowest and highest value
-    for (var key in daysArray) {
-       if (lowest === undefined ? lowest = daysArray[key]['3. low'] : lowest);
-       if (highest === undefined ? highest = daysArray[key]['2. high'] : highest);
-       if (daysArray[key]['3. low'] < lowest ? lowest = daysArray[key]['3. low'] : lowest);
-       if (daysArray[key]['2. high'] > highest ? highest = daysArray[key]['2. high'] : highest);
+    for (var day in daysArray) {
+       if (lowest === undefined ? lowest = daysArray[day]['3. low'] : lowest);
+       if (highest === undefined ? highest = daysArray[day]['2. high'] : highest);
+       if (daysArray[day]['3. low'] < lowest ? lowest = daysArray[day]['3. low'] : lowest);
+       if (daysArray[day]['2. high'] > highest ? highest = daysArray[day]['2. high'] : highest);
      }
 
     const ShowInfo = (info) => {
