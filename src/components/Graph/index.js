@@ -14,13 +14,14 @@ const Graph = (stock) => {
     }
     let daysArray = Object.values(daysValues);
     
+   
     // Finds lowest and highest value
-    daysArray.map((day) => (
-        (lowest === undefined ? lowest = day['3. low'] : lowest),
-        (highest === undefined ? highest = day['2. high'] : highest),
-        (day['3. low'] < lowest ? lowest = day['3. low'] : lowest),
-        (day['2. high'] > highest ? highest = day['2. high'] : highest)
-    ));
+    for (var key in daysArray) {
+       if (lowest === undefined ? lowest = daysArray[key]['3. low'] : lowest);
+       if (highest === undefined ? highest = daysArray[key]['2. high'] : highest);
+       if (daysArray[key]['3. low'] < lowest ? lowest = daysArray[key]['3. low'] : lowest);
+       if (daysArray[key]['2. high'] > highest ? highest = daysArray[key]['2. high'] : highest);
+     }
 
     const ShowInfo = (info) => {
         setDayInfo(info);
