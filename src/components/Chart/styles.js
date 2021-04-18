@@ -12,6 +12,9 @@ export const CandleStyled = styled.div`
         flex-direction: column;
         align-items: center;
         position: relative;
+        &:hover {
+            background-color: lightcyan;
+        }
         & .top-line {
             width: 50%;
             /* height: 45%; */

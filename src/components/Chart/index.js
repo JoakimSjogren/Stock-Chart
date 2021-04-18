@@ -1,7 +1,7 @@
 import React from 'react';
 import { CandleStyled } from './styles';
 
-const CandleStick = ({day, highest, lowest}) => {
+const CandleStick = ({day, highest, lowest, onShowInfo}) => {
     
     const open = day['1. open'];
     const high = day['2. high'];
@@ -34,9 +34,8 @@ const CandleStick = ({day, highest, lowest}) => {
         <CandleStyled>
            
            <div className = "candle-container" 
-                style = {{
-                    
-                }}>
+                onMouseOver={e => onShowInfo([open, high, low, close])}
+                >
                 <div className='top-line'
                     style = {{
                         height: `${topLineHeight}%`,
