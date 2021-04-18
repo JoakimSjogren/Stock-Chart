@@ -9,8 +9,8 @@ const CandleStick = ({day, highest, lowest, onShowInfo}) => {
     const close = day['4. close'];
 
     // let yPosition = Math.floor(Math.random() * 90);
-    let height = (highest-lowest) / (high-low);
-    let yPosition = ((highest-lowest) / close) * 50;
+    // let height = (highest-lowest) / (high-low);
+    // let yPosition = ((highest-lowest) / close) * 50;
 
 
     let topLineHeight;
