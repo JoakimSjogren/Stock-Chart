@@ -27,11 +27,9 @@ const Graph = (stock) => {
     }
 
     const mouseEnter = () => {
-        
         setMouseInside(true);
       }
     const mouseLeave = () => {
-        console.log('Leave')
         setMouseInside(false);
     }
     
@@ -49,9 +47,9 @@ const Graph = (stock) => {
             </GraphStyled>
             <ChartValues>  
                 <h2>{(mouseInside && highest !== undefined ? `Open: ${parseFloat(dayInfo[0]).toFixed(2)}` : 'Open: ')}</h2>
-                <h2>{(mouseInside ? `High: ${parseFloat(dayInfo[1]).toFixed(2)}` : 'High: ')}</h2>
-                <h2>{(mouseInside ? `Low: ${parseFloat(dayInfo[2]).toFixed(2)}` : 'Low: ')}</h2>
-                <h2>{(mouseInside ? `Close: ${parseFloat(dayInfo[3]).toFixed(2)}` : 'Close: ')}</h2>
+                <h2>{(mouseInside && highest !== undefined ? `High: ${parseFloat(dayInfo[1]).toFixed(2)}` : 'High: ')}</h2>
+                <h2>{(mouseInside && highest !== undefined ? `Low: ${parseFloat(dayInfo[2]).toFixed(2)}` : 'Low: ')}</h2>
+                <h2>{(mouseInside && highest !== undefined ? `Close: ${parseFloat(dayInfo[3]).toFixed(2)}` : 'Close: ')}</h2>
             </ChartValues>
         </>
     )

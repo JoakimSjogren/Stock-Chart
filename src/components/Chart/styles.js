@@ -17,17 +17,14 @@ export const CandleStyled = styled.div`
         }
         & .top-line {
             width: 50%;
-            /* height: 45%; */
             background-color: black;
         }
         & .bottom-line {
             width: 50%;
-            /* height: 20%; */
             background-color: black;
         }
         & .outer-line {
             width: 100%;
-            /* height: 100%; */
         }
     }
 `;

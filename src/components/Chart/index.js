@@ -20,13 +20,13 @@ const CandleStick = ({day, highest, lowest, onShowInfo}) => {
     if (close > open) {
         topLineHeight = high - close;
         outerLineHeight = close - open;
-        bottomLineHeight = low - open;
+        bottomLineHeight = open - low;
     }
     //Red Days
     else {
         topLineHeight = high - open;
         outerLineHeight = open - close;
-        bottomLineHeight = low - close;
+        bottomLineHeight = close - low;
     }
     
     let change = (close > open ? 'green' : 'red');
@@ -49,7 +49,7 @@ const CandleStick = ({day, highest, lowest, onShowInfo}) => {
                 </div> 
                 <div className='bottom-line'
                  style = {{
-                    height: `${topLineHeight}%`,
+                    height: `${bottomLineHeight}%`,
                 }}>
                 </div> 
             </div>
