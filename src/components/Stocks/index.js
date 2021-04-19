@@ -13,10 +13,10 @@ const Stocks = ({ stocks, onShowStockInGraph }) => {
                     <h5>Price</h5>
                 </div>
                 <div>
-                    <h5>Todays % gain/lost</h5>
+                    <h5>Todays % gain/loss</h5>
                 </div>
                 <div>
-                    <h5>Todays $ gain/lost</h5>
+                    <h5>Todays $ gain/loss</h5>
                 </div>
                 <div>
                     <h5>Volume</h5>

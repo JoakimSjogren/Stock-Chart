@@ -20,6 +20,12 @@ export const FormStyled = styled.form`
           border: 1px solid black;
           text-align: center;
           text-transform:uppercase;
+          @media (max-width: 1250px) {
+          font-size: 1.2rem;
+    }
+    @media (max-width: 650px) {
+          font-size: .8rem;
+    }
      }
      && button {
           width: 50vw;
@@ -29,5 +35,11 @@ export const FormStyled = styled.form`
           cursor: pointer;
           padding: 0;
           border: 1px solid black;
+          @media (max-width: 1250px) {
+          font-size: 1.2rem;
+    }
+    @media (max-width: 650px) {
+          font-size: .8rem;
+    }
      }
 `;

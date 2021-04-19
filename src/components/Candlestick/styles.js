@@ -15,7 +15,6 @@ export const CandleStyled = styled.div`
         flex-direction: column;
         align-items: center;
         position: relative;
-        
         & .top-line {
             width: 50%;
             background-color: black;

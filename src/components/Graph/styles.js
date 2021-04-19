@@ -17,9 +17,17 @@ export const GraphPricesContainer = styled.div`
      flex-direction: column;
      justify-content: space-between;
      align-items: flex-end;
+     height: 30vw;
      width: 25vw;
      & h2 {
-          margin: 0;
+          margin: 1vw 0;
+          font-size: 2rem;
+          @media (max-width: 1250px) {
+               font-size: 1.2em;
+          }
+          @media (max-width: 650px) {
+               font-size: .8em;
+          }
      }
 `;
 
@@ -32,23 +40,12 @@ export const ChartValues = styled.div`
           text-align: center;
           border-top: 1px solid black;
           margin: 0;
-          font-size: 2.8em;
-     }
-`;
-
-export const LinesContainer = styled.div`
-     position: absolute;
-     width: 50vw;
-     height: 30vw;
-     display: flex;
-     /* flex-direction: column; */
-     align-items: center;
-     justify-content: center;
-
-     & div {
-          position: absolute;
-          width: 50vw;
-          height: 10px;
-          background-color: gray;
+          font-size: 2.8rem;
+          @media (max-width: 1250px) {
+               font-size: 1.5em;
+          }
+          @media (max-width: 650px) {
+               font-size: 1em;
+          }
      }
 `;

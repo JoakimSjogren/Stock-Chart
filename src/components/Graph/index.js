@@ -5,8 +5,9 @@ const Graph = (stock) => {
     let days = stock['stock']['graphStock'];
     const [dayInfo, setDayInfo] = React.useState([]);
     const [mouseInside, setMouseInside] = React.useState(false);
-    let lowest;
+
     let highest;
+    let lowest;
 
     let daysValues = [];
     for (var key in days) {
@@ -39,6 +40,7 @@ const Graph = (stock) => {
         <>
             <GraphPricesContainer>
                 <h2>{(highest !== undefined ? `${Math.floor(highest)}-` : '')}</h2>
+
                 <h2>{(lowest !== undefined ? `${Math.floor(lowest)}-` : '')}</h2>
             </GraphPricesContainer>
             <GraphStyled onMouseEnter={e => {mouseEnter(e.target)}} onMouseLeave={e => {mouseLeave()}}>

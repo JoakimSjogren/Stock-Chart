@@ -14,9 +14,6 @@ const CandleStick = ({day, highest, lowest, onShowInfo}) => {
     // c = high - low
     // (c - b) / (a - b) = c in %
 
-    //Change based on greenOrRed
-    // c = low ? if(gren) : c = high ? if(red) ?
-
     
     let topLineHeight;
     let outerLineHeight;

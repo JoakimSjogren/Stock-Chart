@@ -21,6 +21,12 @@ export const StockStyled = styled.div`
   width: 20%;
 }
 & h5, h3 {
-    font-size: 4em;
+    font-size: 4rem;
+    @media (max-width: 1250px) {
+          font-size: 1.2rem;
+    }
+    @media (max-width: 650px) {
+          font-size: .8rem;
+    }
 }
   `;
