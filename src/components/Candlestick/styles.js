@@ -5,6 +5,9 @@ export const CandleStyled = styled.div`
     justify-content: center;
     width: 1%;
     height: 100%;
+    &:hover {
+            background-color: lightcyan;
+        }
     & .candle-container {
         width: 80%;
         height: 100%;
@@ -12,9 +15,7 @@ export const CandleStyled = styled.div`
         flex-direction: column;
         align-items: center;
         position: relative;
-        &:hover {
-            background-color: lightcyan;
-        }
+        
         & .top-line {
             width: 50%;
             background-color: black;

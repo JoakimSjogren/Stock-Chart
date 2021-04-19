@@ -1,6 +1,6 @@
 import React from 'react';
-import Chart from '../Chart';
-import { GraphStyled, GraphPricesContainer, ChartValues } from './styles';
+import Chart from '../Candlestick';
+import { GraphStyled, GraphPricesContainer, ChartValues} from './styles';
 const Graph = (stock) => {
     let days = stock['stock']['graphStock'];
     const [dayInfo, setDayInfo] = React.useState([]);

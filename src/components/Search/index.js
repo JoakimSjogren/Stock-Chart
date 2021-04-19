@@ -19,12 +19,8 @@ const Search = ({ onAddStock }) => {
         fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=NUNMQUFV7AFVRRCW`)    
         .then((res) => res.json())
         .then((json) => {
-            if (json['Error Message']) {
-                
-            }
-            else {
+            if (!json['Error Message'] && !json['Note'])
                 onAddStock(json);
-            }
             document.getElementById("search-form").reset();
         });
     }

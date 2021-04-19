@@ -35,3 +35,20 @@ export const ChartValues = styled.div`
           font-size: 2.8em;
      }
 `;
+
+export const LinesContainer = styled.div`
+     position: absolute;
+     width: 50vw;
+     height: 30vw;
+     display: flex;
+     /* flex-direction: column; */
+     align-items: center;
+     justify-content: center;
+
+     & div {
+          position: absolute;
+          width: 50vw;
+          height: 10px;
+          background-color: gray;
+     }
+`;
