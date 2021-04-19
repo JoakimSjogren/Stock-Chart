@@ -8,7 +8,7 @@ const CandleStick = ({day, highest, lowest, onShowInfo}) => {
     const low = day['3. low'];
     const close = day['4. close'];
 
-    const heightToLowDiff = highest - lowest;
+    const heightToLowDiff = (highest - lowest) * 1.1;
     // a = highest
     // b = lowest
     // c = high - low
@@ -47,7 +47,7 @@ const CandleStick = ({day, highest, lowest, onShowInfo}) => {
            
            <div className = "candle-container" 
                 style = {{
-                    top: `${100 - yPosition}%`,
+                    top: `${95 - yPosition}%`,
                 }}
                 >
                 <div className='top-line'
