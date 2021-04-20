@@ -31,7 +31,6 @@ const CandleStick = ({day, highest, lowest, onShowInfo}) => {
         bottomLineHeight = (close - low) / heightToLowDiff * 100;
     }
     
-    // let yPosition = (close - lowest) / heightToLowDiff * 100;
     let yPosition = (topLineHeight + outerLineHeight + bottomLineHeight);
     yPosition += (low - lowest) / heightToLowDiff * 100;
 
