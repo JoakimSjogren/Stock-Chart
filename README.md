@@ -1,3 +1,3 @@
 # Stock
 
-# NUNMQUFV7AFVRRCW
+https://stock-chart.vercel.app/
